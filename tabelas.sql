@@ -173,10 +173,31 @@ create table notificacoes (
 
 
 -- Catálogo de Jogos e Conteúdo
+create table publicadoras
+(
+id int not null,
+nome varchar(40),
+sede varchar (40),
+primary key (id)
+)
 
+create table jogos
+(
+id int not null,
+id_jogo_pai int notnull,
+titulo varchar(50),
+preco boolean notnull,
+primary key (id)
+)
 
+create table generos
+(
+id int not null,
+nome_genero varchar(40),
+primary key (id)
+)
 
-
+	
 -- Tabela de Tags
 create table tags (
     id int not null,
